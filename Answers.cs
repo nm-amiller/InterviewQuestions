@@ -24,13 +24,14 @@ public static class Answers
 
     public static int[] TwoSums(int[] numbers, int target)
     {
-        for (var i = 0; i < numbers.Length - 1; i++)
+        var seen = new Dictionary<int, int>();
+        for (var i = 0; i < numbers.Length; i++)
         {
-            for (var j = i; j < numbers.Length; j++)
-            {
-                if (numbers[i] + numbers[j] == target)
-                    return new[] { i, j };
-            }
+            var current = numbers[i];
+            if (seen.TryGetValue(current, out var value))
+                return new[] { i, value };
+            else
+                seen.Add(target - current, i);
         }
         throw new Exception("Never Get Here!");
     }
@@ -54,7 +55,7 @@ public static class Answers
                 _ => throw new Exception("Unsupported Roman Numeral")
             };
 
-            if(current >= previous)
+            if (current >= previous)
                 aggregator += current;
             else
                 aggregator -= current;
