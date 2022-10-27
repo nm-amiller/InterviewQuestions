@@ -13,7 +13,7 @@ public static class Questions
     }
 
     // Given a list of integers and a target number
-    // Return the index's of the numbers that sum to the target number as an array
+    // Return the indices of the two numbers that sum to the target number as an array
     // You can assume there is only exactly one solution that sums to the target
     // You should not use the same element twice
     // Example: ([1, 2, 3], 5)
