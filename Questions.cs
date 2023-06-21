@@ -23,22 +23,6 @@ public static class Questions
         return Array.Empty<int>();
     }
 
-    // Given a string of Roman Numerals, convert it to an integer
-    // The string could contain these symbols:
-    // I -> 1
-    // V -> 5
-    // X -> 10
-    // L -> 50
-    // C -> 100
-    // D -> 500
-    // M -> 1000
-    // Example: "XIV"
-    // Output: 14 
-    public static int RomanNumeralToInt(string input)
-    {
-        return 0;
-    }
-
     // You are given a set of integers from 1 to n that contains a duplicated number...
     // Return an array containing: the number that was duplicated and the missing number
     // Example: [1,2,2,4]
